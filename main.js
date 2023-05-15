@@ -1,18 +1,28 @@
 function showDate() {
 
+    // Storing current date
     const date = new Date();
     const currentDay = date.getDate();
     const currentMonth = date.getMonth() + 1;
     const currentYear = date.getFullYear();
 
+    // Storing user dates input
     let day = document.getElementById("day").value
     let month = document.getElementById("month").value
-    let year = currentYear - document.getElementById("year").value
+    let year = document.getElementById("year").value
 
+
+    if (year == 0) {
+        year = 0
+    } else {
+        year = currentYear - document.getElementById("year").value
+    }
 
     if (currentMonth - month < 0) {
         year--
-        month = (currentMonth + 12) - month 
+        month = (currentMonth + 12) - month
+    } else if (month == 0) {
+        month = 0
     } else {
         month = currentMonth - month
     }
@@ -20,12 +30,21 @@ function showDate() {
     if (currentDay - day < 0) {
         month--
         day = (currentDay + 30) - day
+    } else if(day == 0) {
+        day = 0
     } else {
         day = currentDay - day
     }
 
-    document.getElementById("day_result").innerText = day
-    document.getElementById("month_result").innerText = month
-    document.getElementById("year_result").innerText = year
-    console.log(day)
+    if (day == 0 || month == 0 || year == 0) {
+        document.querySelector(".warning").innerText = "Must be a valid date."
+    } else {
+        document.querySelector(".warning").innerText = ""
+
+        document.getElementById("day_result").innerText = day
+        document.getElementById("month_result").innerText = month
+        document.getElementById("year_result").innerText = year
+
+    }
+    console.log(month);
 }

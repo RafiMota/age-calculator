@@ -31,23 +31,28 @@
 				<section class="input">
 					<div class="date_input">
 						<label>DAY</label>
-						<input type="number" name="day" id="day" />
+						<input type="number" name="day" placeholder="DD" id="day" />
+						<p class="warning"></p>
 					</div>
 
 					<div class="date_input">
 						<label>MONTH</label>
-						<input type="number" name="month" id="month" />
+						<input type="number" name="month" placeholder="MM" id="month" />
+						<p class="warning"></p>
 					</div>
 
 					<div class="date_input">
 						<label for="">YEAR</label>
-						<input type="number" name="year" id="year" />
+						<input type="number" name="year" placeholder="YY" id="year" />
+						<p class="warning"></p>
 					</div>
 				</section>
 
 				<div class="input_divider">
 					<hr />
-					<button onclick="showDate()"><i class="fa-solid fa-check fa-2xl fa-white" style="color: #efefef"></i></button>
+					<button onclick="showDate()">
+						<i class="fa-solid fa-check fa-2xl fa-white" style="color: #efefef"></i>
+					</button>
 				</div>
 
 				<section class="result">
@@ -56,6 +61,16 @@
 					<p class="result_output"><span id="day_result">--</span> days</p>
 				</section>
 			</main>
+
+			<footer>
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/hub"
+					target="_blank"
+					>Frontend Mentor</a
+				>. Coded By <a href="https://github.com/rafimota">Rafí Mota</a>
+			</footer>
+
 		</div>
 		<div class="attribution">
 			Challenge by
@@ -64,7 +79,10 @@
 			>. Coded by <a href="#">Your Name Here</a>.
 		</div>
 
-		<script src="https://kit.fontawesome.com/31f7226351.js" crossorigin="anonymous"></script>
+		<script
+			src="https://kit.fontawesome.com/31f7226351.js"
+			crossorigin="anonymous"
+		></script>
 		<script src="main.js"></script>
 	</body>
 </html>
