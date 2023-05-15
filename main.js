@@ -13,8 +13,9 @@ function showDate() {
 
     const buffer = [day, month, year]
 
-    if (year == 0) {
+    if (year == 0 || buffer[2] > currentYear) {
         year = 0
+        buffer[2] = 0
     } else {
         year = currentYear - document.getElementById("year").value
     }
@@ -22,24 +23,26 @@ function showDate() {
     if (currentMonth - month < 0) {
         year--
         month = (currentMonth + 12) - month
-    } else if (month == 0) {
+    } else if (month == 0 || buffer[1] > 12) {
         month = 0
+        buffer[1] = 0
     } else {
         month = currentMonth - month
     }
 
     if (currentDay - day < 0) {
-        if(month > 0) {
+        if (month > 0) {
             month--
         }
         day = (currentDay + 30) - day
-    } else if(day == 0) {
+    } else if (day == 0 || buffer[0] > 31) {
         day = 0
+        buffer[0] = 0
     } else {
         day = currentDay - day
     }
 
-    if (buffer[0] == 0 || buffer [1] == 0 || buffer[2] == 0) {
+    if (buffer[0] == 0 || buffer[1] == 0 || buffer[2] == 0) {
         document.querySelector(".warning").innerText = "Must be a valid date."
     } else {
         document.querySelector(".warning").innerText = ""
@@ -49,5 +52,5 @@ function showDate() {
         document.getElementById("year_result").innerText = year
 
     }
-    
+
 }
