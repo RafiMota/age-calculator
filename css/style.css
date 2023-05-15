@@ -1,0 +1,116 @@
+:root {
+    --blue: hsl(220, 63%, 53%);
+    --blue-shadow: hsl(220, 63%, 42%);
+    --white: #fff;
+    --text-gray: #696969;
+    --text-black: #333333;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    
+}
+
+.flex_wrapper {
+    background-color: #eaeaea;
+
+    position: relative;
+    height: 100vh;
+    
+
+}
+
+main {
+    background-color: var(--white);
+    width: 600px;
+    height: 400px;
+    
+    /* Centering X and Y axis of main */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 2rem;
+    border-radius: 20px 20px 150px 20px;
+}
+
+section.input {
+    display: flex;
+
+}
+
+div.date_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-basis: 30%;
+
+}
+
+section.input input {
+    width: 80%;
+    
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+label {
+    color: var(--text-gray);
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+hr {
+    width: 85%;
+    margin: 2rem 0;
+}
+
+.input_divider {
+    display: flex;
+    align-items: center;
+}
+
+.input_divider button {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 100%;
+
+    background-color: var(--blue);
+}
+
+.input_divider button:hover {
+    background-color: var(--blue-shadow);
+}
+
+p {
+    color: var(--text-black);
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+p span {
+    color: var(--blue);
+}
