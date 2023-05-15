@@ -11,6 +11,7 @@ function showDate() {
     let month = document.getElementById("month").value
     let year = document.getElementById("year").value
 
+    const buffer = [day, month, year]
 
     if (year == 0) {
         year = 0
@@ -36,7 +37,7 @@ function showDate() {
         day = currentDay - day
     }
 
-    if (day == 0 || month == 0 || year == 0) {
+    if (buffer[0] == 0 || buffer [1] == 0 || buffer[2] == 0) {
         document.querySelector(".warning").innerText = "Must be a valid date."
     } else {
         document.querySelector(".warning").innerText = ""
@@ -46,5 +47,5 @@ function showDate() {
         document.getElementById("year_result").innerText = year
 
     }
-    console.log(month);
+    
 }
