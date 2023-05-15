@@ -142,9 +142,21 @@ footer a {
 }
 
 @media (max-width: 600px) {
+    
+    .flex_wrapper {
+        overflow: hidden;
+    }
+
     main {
-        height: 450px;
-        width: 350px;
+        height: 50vh;
+        width: 95vw;
+    }
+
+    @media (max-height: 800px) {
+        main {
+            height: 55vh;
+
+        }
     }
 
     section.input {
