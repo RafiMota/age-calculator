@@ -29,7 +29,9 @@ function showDate() {
     }
 
     if (currentDay - day < 0) {
-        month--
+        if(month > 0) {
+            month--
+        }
         day = (currentDay + 30) - day
     } else if(day == 0) {
         day = 0
